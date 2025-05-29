@@ -1,0 +1,57 @@
+---
+title: Internacionalización (i18n)
+---
+
+# Internacionalización (i18n)
+
+El proyecto utiliza el módulo `@nuxtjs/i18n` para soportar múltiples idiomas en la interfaz.
+
+## Idiomas soportados
+
+- Español (`es`)
+- Inglés (`en`)
+- Francés (`fr`)
+- Portugués (`pt`)
+- Alemán (`de`)
+- Italiano (`it`)
+
+## Estructura de traducciones
+
+- Los archivos de traducción están en `i18n/locales/` y usan formato JSON.
+- Cada archivo contiene las claves y textos traducidos para las distintas secciones de la app (categorías, noticias, clima, errores, etc).
+
+## Ejemplo de archivo (`es.json`):
+
+```json
+{
+  "categories": {
+    "sports": "Deportes",
+    ...
+  },
+  "news_display": {
+    "news": "NOTICIAS"
+  },
+  ...
+}
+```
+
+## Configuración en Nuxt
+
+- El idioma por defecto se define en `nuxt.config.ts` (`defaultLocale`).
+- La estrategia `no_prefix` evita prefijos de idioma en las rutas.
+
+## Cambiar idioma en la app
+
+- El usuario puede cambiar el idioma desde el selector de banderas en la cabecera.
+- El cambio de idioma recarga la interfaz y limpia datos cacheados.
+
+## Agregar un nuevo idioma
+
+1. Crea un archivo JSON en `i18n/locales/` (ej: `pl.json`).
+2. Añade las claves y traducciones necesarias.
+3. Agrega el idioma en la configuración de `nuxt.config.ts` dentro de `locales`.
+4. (Opcional) Añade la bandera y nombre en el array de idiomas del componente `LanguageComponent.vue`.
+
+---
+
+Consulta la sección de **configuración** para ver cómo se integra i18n en Nuxt.

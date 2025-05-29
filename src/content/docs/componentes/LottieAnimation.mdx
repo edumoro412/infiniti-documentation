@@ -1,0 +1,37 @@
+---
+title: LottieAnimation
+---
+
+# LottieAnimation
+
+Este componente muestra una animación Lottie usando el web component `<dotlottie-player>`. Carga dinámicamente el script necesario si aún no está presente en la página.
+
+## Funcionamiento
+
+- Al montar el componente, verifica si el custom element `dotlottie-player` está registrado. Si no, inserta el script desde unpkg.
+- Muestra una animación Lottie específica, con autoplay y loop activados.
+- El tamaño de la animación es de 300x300px por defecto.
+
+## Ejemplo de uso en MDX
+
+```mdx
+import LottieAnimation from "./LottieAnimation.vue";
+
+<LottieAnimation />
+```
+
+## Props
+
+No recibe props externas. La animación y sus parámetros están definidos en el template.
+
+## Personalización
+
+Puedes cambiar la animación modificando el atributo `src` del `<dotlottie-player>` en el template.
+
+## Estilos
+
+No incluye estilos propios, pero puedes personalizar el tamaño y otros estilos directamente en el template.
+
+---
+
+Para integrarlo, simplemente importa y usa el componente como se muestra arriba.

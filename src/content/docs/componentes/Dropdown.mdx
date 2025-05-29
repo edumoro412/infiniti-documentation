@@ -1,0 +1,46 @@
+---
+title: DropdownComponent
+---
+
+# DropdownComponent
+
+Este componente muestra un menú desplegable de categorías, permitiendo al usuario seleccionar una opción. Utiliza Vue 3 y Pinia para la gestión del tema (oscuro/claro) y está diseñado para integrarse fácilmente en aplicaciones Nuxt.
+
+## Funcionamiento
+
+- Muestra un ícono de menú hamburguesa.
+- Al hacer clic en el ícono, se despliega una lista de categorías.
+- Al seleccionar una categoría, el menú se cierra y navega a la ruta correspondiente.
+- Detecta clics fuera del menú para cerrarlo automáticamente.
+- Cambia el estilo según el tema (oscuro o claro) usando el store de Pinia.
+
+## Ejemplo de uso en MDX
+
+```mdx
+import DropdownComponent from "./DropdownComponent.vue";
+
+<DropdownComponent />
+```
+
+## Props
+
+Este componente no recibe props externas. Utiliza internamente:
+
+- `themeStore` para el tema.
+- `categories` (array local de categorías).
+
+## Eventos
+
+- Cierra el menú al seleccionar una categoría o hacer clic fuera del menú.
+
+## Personalización
+
+Puedes modificar las categorías editando el array `categories` dentro del componente.
+
+## Estilos
+
+Incluye estilos SCSS para el menú, ícono y soporte para tema oscuro.
+
+---
+
+¿Tienes dudas sobre cómo integrarlo? Simplemente importa y usa el componente como se muestra arriba.

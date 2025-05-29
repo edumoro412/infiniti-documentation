@@ -1,0 +1,40 @@
+---
+title: WeatherIconComponent
+---
+
+# WeatherIconComponent
+
+Este componente muestra un ícono de clima basado en los valores de precipitación y temperatura máxima/mínima recibidos como props. Utiliza diferentes SVGs para representar distintos estados del clima.
+
+## Funcionamiento
+
+- Recibe las props `prec` (precipitación), `max` (temperatura máxima) y `min` (temperatura mínima).
+- Selecciona el ícono adecuado según los valores de las props:
+  - Soleado, parcialmente nublado, nublado, chubascos leves, lluvia fuerte o sin datos claros.
+- Los íconos se importan desde la carpeta de assets.
+
+## Ejemplo de uso en MDX
+
+```mdx
+import WeatherIconComponent from "./WeatherIconComponent.vue";
+
+<WeatherIconComponent :prec="0" :max="22" :min="12" />
+```
+
+## Props
+
+- `prec` (number, obligatoria): Precipitación.
+- `max` (number, obligatoria): Temperatura máxima.
+- `min` (number, obligatoria): Temperatura mínima.
+
+## Personalización
+
+Puedes modificar la lógica de selección de íconos o agregar nuevos íconos editando el script del componente.
+
+## Estilos
+
+Incluye estilos SCSS para centrar y escalar el ícono.
+
+---
+
+Para integrarlo, simplemente importa y usa el componente como se muestra arriba, pasando los valores de clima como props.

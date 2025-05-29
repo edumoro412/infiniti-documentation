@@ -1,0 +1,57 @@
+---
+title: Solución de Problemas
+---
+
+# Solución de Problemas (Troubleshooting)
+
+Esta sección recopila problemas comunes y sus soluciones para el proyecto **INFINITI**.
+
+## Problemas frecuentes
+
+### 1. Error de clave API
+
+- **Síntoma:** No se muestran noticias o clima.
+- **Solución:**
+  - Verifica que las variables de entorno con las claves API estén correctamente configuradas.
+  - Revisa `nuxt.config.ts` y `.env`.
+
+### 2. Problemas de CORS
+
+- **Síntoma:** Errores al consumir APIs externas.
+- **Solución:**
+  - Asegúrate de que los endpoints externos permiten peticiones desde tu origen.
+  - Usa los endpoints internos del servidor para hacer proxy si es necesario.
+
+### 3. Cambios de idioma no reflejados
+
+- **Síntoma:** La interfaz no cambia de idioma o muestra textos incorrectos.
+- **Solución:**
+  - Verifica que el archivo de traducción esté completo y bien formateado.
+  - Limpia el caché del navegador y recarga la página.
+
+### 4. Problemas con el tema oscuro/claro
+
+- **Síntoma:** El tema no cambia o no se guarda la preferencia.
+- **Solución:**
+  - Revisa el store de Pinia (`stores/theme.ts`).
+  - Asegúrate de que `localStorage` esté habilitado en el navegador.
+
+### 5. Errores de dependencias
+
+- **Síntoma:** Fallos al instalar o ejecutar el proyecto.
+- **Solución:**
+  - Elimina `node_modules` y `package-lock.json`/`yarn.lock` y reinstala:
+    ```bash
+    rm -rf node_modules package-lock.json
+    npm install
+    ```
+
+## Consejos de depuración
+
+- Usa la consola del navegador y el terminal para revisar errores detallados.
+- Habilita las devtools de Nuxt para inspeccionar el estado y rutas.
+- Consulta la documentación oficial de Nuxt, Vue y Pinia para problemas avanzados.
+
+---
+
+Si encuentras un problema no documentado, añade una nueva sección aquí para futuras referencias.

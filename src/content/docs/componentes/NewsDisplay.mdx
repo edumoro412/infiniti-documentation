@@ -1,0 +1,41 @@
+---
+title: NewsDisplay
+---
+
+# NewsDisplay
+
+Este componente muestra una lista de noticias en formato de tarjetas. Recibe un array de artículos como prop y soporta tema oscuro.
+
+## Funcionamiento
+
+- Recibe la prop `articles` (array de objetos tipo NewsArticle).
+- Muestra un título, un formulario de búsqueda y una lista de noticias.
+- Cada noticia incluye título, imagen, descripción truncada y enlace externo.
+- Usa el store de Pinia para el tema oscuro.
+- Utiliza el componente FormComponent para la búsqueda.
+
+## Ejemplo de uso en MDX
+
+```mdx
+import NewsDisplay from "./NewsDisplay.vue";
+
+<NewsDisplay :articles="myArticlesArray" />
+```
+
+Donde `myArticlesArray` es un array de objetos con la estructura de NewsArticle.
+
+## Props
+
+- `articles` (obligatoria): Array de artículos de noticias.
+
+## Personalización
+
+Puedes modificar la presentación de las noticias editando el template o los estilos del componente.
+
+## Estilos
+
+Incluye estilos SCSS para el contenedor, las tarjetas de noticias y soporte para tema oscuro.
+
+---
+
+Para integrarlo, simplemente importa y usa el componente como se muestra arriba, pasando el array de artículos como prop.

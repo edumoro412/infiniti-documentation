@@ -1,0 +1,42 @@
+---
+title: Stores (Pinia)
+---
+
+# Stores (Pinia)
+
+El proyecto utiliza **Pinia** para la gestión del estado global, facilitando la persistencia y reactividad de datos como el tema de la aplicación.
+
+## Store principal: `theme`
+
+Ubicación: `stores/theme.ts`
+
+### Propiedades y métodos
+
+- **darkTheme**: Booleano reactivo que indica si el tema oscuro está activo.
+- **toggleDarkTheme()**: Alterna entre tema oscuro y claro.
+
+### Persistencia
+
+- El valor de `darkTheme` se guarda en `localStorage` y se recupera al iniciar la app.
+- El cambio de tema es reactivo y afecta a todos los componentes que lo consumen.
+
+### Ejemplo de uso
+
+```ts
+import { useThemeStore } from "~/stores/theme";
+const themeStore = useThemeStore();
+
+// Leer el estado
+const isDark = themeStore.darkTheme;
+
+// Cambiar el tema
+themeStore.toggleDarkTheme();
+```
+
+## Añadir nuevos stores
+
+Puedes crear nuevos stores en la carpeta `stores/` usando `defineStore` de Pinia para gestionar otros estados globales (usuario, preferencias, etc).
+
+---
+
+Consulta la sección de **configuración** para ver cómo se integra Pinia en Nuxt.

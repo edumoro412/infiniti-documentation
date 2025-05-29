@@ -1,0 +1,45 @@
+---
+title: FormComponent
+---
+
+# FormComponent
+
+Este componente es un formulario de búsqueda que permite al usuario ingresar texto y redirige a la página de resultados de búsqueda. Está diseñado para integrarse en aplicaciones Nuxt y soporta tema oscuro.
+
+## Funcionamiento
+
+- Muestra un campo de texto y un botón con ícono de búsqueda.
+- Al enviar el formulario, redirige a `/search?q=...` con el texto ingresado.
+- Si ya existe un query `q` en la URL, lo muestra en el input al montar el componente.
+- Cambia el estilo según el tema (oscuro o claro) usando el store de Pinia.
+
+## Ejemplo de uso en MDX
+
+```mdx
+import FormComponent from "./FormComponent.vue";
+
+<FormComponent />
+```
+
+## Props
+
+Este componente no recibe props externas. Utiliza internamente:
+
+- `themeStore` para el tema.
+- `search` (reactivo para el input).
+
+## Eventos
+
+- Redirige a la página de búsqueda al enviar el formulario.
+
+## Personalización
+
+Puedes modificar el comportamiento de búsqueda editando la función `handleSubmit` dentro del componente.
+
+## Estilos
+
+Incluye estilos SCSS para el formulario, input, botón y soporte para tema oscuro.
+
+---
+
+Para integrarlo, simplemente importa y usa el componente como se muestra arriba.

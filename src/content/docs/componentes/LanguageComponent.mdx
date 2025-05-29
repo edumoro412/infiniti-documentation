@@ -1,0 +1,42 @@
+---
+title: LanguageComponent
+---
+
+# LanguageComponent
+
+Este componente permite al usuario seleccionar el idioma de la aplicación mediante un menú desplegable de banderas. Es compatible con tema oscuro y actualiza la interfaz y los datos almacenados al cambiar de idioma.
+
+## Funcionamiento
+
+- Muestra la bandera del idioma actual.
+- Al hacer clic, despliega una lista de idiomas disponibles con su respectiva bandera.
+- Al seleccionar un idioma, cambia el idioma de la app, limpia datos cacheados y recarga la página.
+- Cambia el estilo según el tema (oscuro o claro) usando el store de Pinia.
+- Cierra el menú al hacer clic fuera del selector.
+
+## Ejemplo de uso en MDX
+
+```mdx
+import LanguageComponent from "./LanguageComponent.vue";
+
+<LanguageComponent />
+```
+
+## Props
+
+No recibe props externas. Utiliza internamente:
+
+- `themeStore` para el tema.
+- `languages` (array local de idiomas).
+
+## Personalización
+
+Puedes agregar o quitar idiomas modificando el array `languages` dentro del componente.
+
+## Estilos
+
+Incluye estilos SCSS para el selector, menú desplegable y soporte para tema oscuro.
+
+---
+
+Para integrarlo, simplemente importa y usa el componente como se muestra arriba.

@@ -1,0 +1,42 @@
+---
+title: Configuración
+---
+
+# Configuración
+
+Esta sección describe los parámetros clave de configuración del proyecto **INFINITI**.
+
+## Archivo principal: `nuxt.config.ts`
+
+- **compatibilityDate**: Fecha de compatibilidad para Nuxt.
+- **devtools**: Habilita las herramientas de desarrollo.
+- **runtimeConfig**: Variables de entorno para claves API (privadas y públicas).
+- **css**: Importa variables y estilos globales (CSS y SCSS).
+- **app.head**: Configuración del título y favicon de la app.
+- **modules**: Módulos Nuxt utilizados:
+  - `@nuxt/eslint`: Linter para el código.
+  - `@nuxt/content`: Gestión de contenido Markdown/MDX.
+  - `@nuxt/fonts`, `@nuxt/icon`, `@nuxt/image`: Gestión de fuentes, iconos e imágenes.
+  - `nuxt-svgo`: Optimización de SVGs.
+  - `@nuxtjs/i18n`: Internacionalización.
+- **i18n**: Configuración de idiomas soportados, idioma por defecto y estrategia de rutas.
+- **vite**: Configuración de Vite para SCSS, incluyendo mixins globales.
+
+## Variables de entorno
+
+- Las claves API se gestionan mediante variables de entorno y se acceden desde `runtimeConfig`.
+
+## Temas y estilos
+
+- Los temas (oscuro/claro) se gestionan con Pinia y variables CSS.
+- Los estilos globales se encuentran en `assets/styles/`.
+
+## Internacionalización (i18n)
+
+- Soporta español, inglés, francés, portugués, alemán e italiano.
+- Los archivos de traducción están en `i18n/locales/`.
+- Estrategia `no_prefix`: las rutas no llevan prefijo de idioma.
+
+---
+
+Sigue con la sección de **uso** para ver cómo interactuar con la aplicación.

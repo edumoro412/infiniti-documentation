@@ -1,0 +1,41 @@
+---
+title: HeaderComponent
+---
+
+# HeaderComponent
+
+Este componente representa la cabecera fija de la aplicación. Incluye el logo, botones para cambiar el tema, seleccionar idioma, acceder al clima y desplegar el menú de categorías. Es compatible con tema oscuro y se oculta automáticamente al hacer scroll hacia abajo.
+
+## Funcionamiento
+
+- Muestra el logo y varios botones interactivos (tema, idioma, clima, menú).
+- El botón de tema alterna entre modo claro y oscuro usando Pinia.
+- El header se oculta al hacer scroll hacia abajo y reaparece al hacer scroll hacia arriba.
+- Incluye componentes hijos: NameLogoComponent, LanguageComponent, DropdownComponent.
+
+## Ejemplo de uso en MDX
+
+```mdx
+import HeaderComponent from "./HeaderComponent.vue";
+
+<HeaderComponent />
+```
+
+## Props
+
+No recibe props externas. Utiliza internamente:
+
+- `themeStore` para el tema.
+- `showHeader` para mostrar/ocultar la cabecera.
+
+## Personalización
+
+Puedes modificar los botones o el comportamiento de scroll editando el script del componente.
+
+## Estilos
+
+Incluye estilos SCSS para la cabecera, botones y soporte para tema oscuro.
+
+---
+
+Para integrarlo, simplemente importa y usa el componente como se muestra arriba.

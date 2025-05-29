@@ -1,0 +1,45 @@
+---
+title: Estilos y Temas
+---
+
+# Estilos y Temas
+
+El proyecto utiliza una combinación de **CSS variables** y **SCSS** para la gestión de estilos y temas visuales.
+
+## Variables CSS
+
+- Definidas en `assets/styles/css/variables.css`.
+- Permiten cambiar fácilmente los colores principales del tema:
+  ```css
+  :root {
+    --c-primary: #212529;
+    --c-secondary: #e9ecef;
+    --c-tertiary: #adb5bd;
+    --c-fourth: #343a40;
+  }
+  ```
+
+## SCSS y Mixins
+
+- Los estilos globales y utilidades están en `assets/styles/scss/`.
+- Mixins reutilizables en `_mixins.scss` para grid, centrado y títulos.
+- `main.scss` importa los mixins y el reset de estilos.
+
+## Reset de estilos
+
+- `reset.scss` asegura una base visual consistente eliminando márgenes, paddings y normalizando fuentes y listas.
+
+## Temas (oscuro/claro)
+
+- El tema se gestiona con Pinia y se aplica mediante clases y variables CSS.
+- Los componentes usan condicionales para aplicar clases de tema oscuro.
+
+## Buenas prácticas
+
+- Usa las variables CSS para mantener coherencia visual.
+- Aplica mixins SCSS para layouts y títulos consistentes.
+- Personaliza los colores y estilos globales desde los archivos en `assets/styles/`.
+
+---
+
+Consulta la sección de **configuración** para ver cómo se importan los estilos globales en Nuxt.

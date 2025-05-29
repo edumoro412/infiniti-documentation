@@ -1,0 +1,44 @@
+---
+title: Estructura del Proyecto
+---
+
+# Estructura del Proyecto
+
+A continuación se describe la estructura principal de carpetas y archivos del proyecto **INFINITI**:
+
+```
+infiniti/
+├── app.vue                  # Componente raíz de la app
+├── assets/                  # Recursos estáticos (iconos, imágenes, estilos)
+├── components/              # Componentes Vue reutilizables
+├── composables/             # Funciones reutilizables (composables de Vue)
+├── error.vue                # Página de error personalizada
+├── i18n/                    # Configuración y archivos de internacionalización
+├── interfaces/              # Definiciones de interfaces y tipos TypeScript
+├── middleware/              # Middlewares de Nuxt
+├── nuxt.config.ts           # Configuración principal de Nuxt
+├── package.json             # Dependencias y scripts del proyecto
+├── pages/                   # Vistas y rutas de la aplicación
+├── plugins/                 # Plugins de Nuxt (ej: Pinia)
+├── public/                  # Archivos públicos accesibles desde la web
+├── server/                  # Lógica del backend/API
+├── src/                     # Código fuente adicional (ej: i18n)
+├── stores/                  # Stores de Pinia para estado global
+├── tsconfig.json            # Configuración de TypeScript
+├── utils/                   # Funciones utilitarias/helper
+└── README.md                # Documentación principal del proyecto
+```
+
+## Descripción de carpetas clave
+
+- **components/**: Todos los componentes Vue reutilizables, cada uno con su documentación en `.mdx`.
+- **pages/**: Vistas principales y rutas de la app.
+- **stores/**: Estado global gestionado con Pinia.
+- **i18n/**: Archivos de traducción y configuración de idiomas.
+- **assets/**: Imágenes, iconos SVG y estilos globales.
+- **utils/**: Funciones auxiliares para lógica común.
+- **server/**: Endpoints y lógica de backend si aplica.
+
+---
+
+Sigue con la sección de **configuración** para conocer los archivos y parámetros clave del proyecto.

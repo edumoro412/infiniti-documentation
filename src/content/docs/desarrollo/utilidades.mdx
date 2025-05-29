@@ -1,0 +1,41 @@
+---
+title: Utilidades
+---
+
+# Utilidades
+
+El proyecto incluye funciones auxiliares en la carpeta `utils/` para facilitar la lógica común y la reutilización de código.
+
+## Funciones principales
+
+### 1. `fetchCategories`
+
+- **Ubicación:** `utils/categories.ts`
+- **Descripción:**
+  - Obtiene noticias de una categoría y un idioma específicos usando la API de NewsData.
+  - Realiza paginación (hasta 3 páginas) y filtra resultados duplicados por título.
+  - Devuelve un objeto con el estado, número total de resultados y el array de noticias.
+- **Uso:**
+  ```ts
+  import { fetchCategories } from "@/utils/categories";
+  const data = await fetchCategories("sports", "es");
+  ```
+
+### 2. `truncText`
+
+- **Ubicación:** `utils/truncText.ts`
+- **Descripción:**
+  - Trunca un texto a una longitud máxima y añade "..." si es necesario.
+- **Uso:**
+  ```ts
+  import { truncText } from "@/utils/truncText";
+  const resumen = truncText("Texto largo...", 100);
+  ```
+
+## Tipos auxiliares
+
+- Los tipos `NewsArticle`, `NewsResponse` y `Lang` se definen en la carpeta `interfaces/` y se usan para tipar correctamente los datos en las utilidades.
+
+---
+
+Consulta la sección de **estructura del proyecto** para ver dónde se ubican estas utilidades.

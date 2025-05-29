@@ -1,0 +1,62 @@
+---
+title: API e Integraciones
+---
+
+# API e Integraciones
+
+El proyecto consume datos de noticias y clima a través de endpoints propios y servicios externos.
+
+## Endpoints internos (server/api/)
+
+- **/api/news**: Devuelve noticias destacadas (top) según el idioma (`locale`).
+- **/api/[category]**: Devuelve noticias filtradas por categoría (sports, business, science, etc).
+- **/api/search**: Devuelve noticias según el término de búsqueda.
+- **/api/weather**: Devuelve el pronóstico del clima diario según latitud y longitud.
+
+## Integración con servicios externos
+
+- **NewsData.io**: Fuente principal de noticias. Se accede mediante clave API y soporta paginación y filtrado por idioma/categoría.
+- **Open-Meteo**: Fuente de datos meteorológicos, consultada por latitud y longitud.
+
+## Estructura de datos
+
+### Noticias (`NewsArticle`)
+
+```ts
+interface NewsArticle {
+  article_id: string;
+  title: string;
+  link: string;
+  pubDate: string;
+  image_url: string;
+  source_name: string;
+  language: string;
+  country: string[];
+  category: string[];
+  description: string;
+}
+```
+
+### Clima (`Weather`)
+
+```ts
+interface Weather {
+  daily: {
+    time: string[];
+    temperature_2m_max: number[];
+    temperature_2m_min: number[];
+    precipitation_sum: number[];
+  };
+}
+```
+
+## Ejemplo de consumo
+
+```ts
+const res = await $fetch("/api/news?locale=es");
+const noticias = res.results;
+```
+
+---
+
+Consulta la sección de **utilidades** para ver funciones auxiliares para consumir estas APIs.
