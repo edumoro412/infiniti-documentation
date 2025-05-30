@@ -8,6 +8,7 @@ export default defineConfig({
     starlight({
       title: "INFINITI",
       description: "Documentation for Infiniti project",
+      favicon: "/favicon.png",
       logo: {
         src: "./public/infinito.png",
         alt: "Logo de Infiniti",
